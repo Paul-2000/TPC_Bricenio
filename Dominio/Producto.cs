@@ -8,5 +8,7 @@ namespace Dominio
 {
     public class Producto
     {
+        public Marca Id { get; set; }
+
     }
 }
