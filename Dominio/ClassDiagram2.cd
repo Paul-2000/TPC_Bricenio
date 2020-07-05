@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Dominio.Administrador" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="Dominio.Persona" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="1.062" />
+        <Point X="2" Y="1.375" />
+        <Point X="1.25" Y="1.375" />
+        <Point X="1.25" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Administrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dominio.Cliente" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dominio.Direccion" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgEAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Direccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dominio.Localidad" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Localidad.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdDireccion" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Dominio.Marca">
+    <Position X="7.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Marca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dominio.Modelo">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dominio.Persona" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAEAAAAgAAAAAGAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persona.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdLocalidad" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Dominio.Producto">
+    <Position X="8.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAACAgAAEAAAAgIARAAAAAAAAAAAgAAAAAAg=</HashCode>
+      <FileName>Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dominio.Usuario">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <AssociationLine Name="IdCliente" Type="Dominio.Cliente">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.102" Y="0.068" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdCliente" />
+      <Property Name="IdAdministrador" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

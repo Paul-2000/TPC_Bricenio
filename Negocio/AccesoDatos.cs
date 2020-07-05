@@ -10,26 +10,66 @@ namespace Negocio
 {
     public class AccesoDatos
     {
-        public SqlDataReader lector { get; set; }
-        public SqlConnection conexion { get; set; }
-        public SqlCommand comando { get; set; }
+        public SqlDataReader Lector { get; set; }
+        public SqlConnection Conexion { get; set; }
+        public SqlCommand Comando { get; set; }
         public AccesoDatos()
         {
-            conexion = new SqlConnection("data source=DESKTOP-VMO2M2L\\SQLEXPRESS01; initial catalog=Bricenio_DB; integrated security=sspi;");
-            comando = new SqlCommand();
-            comando.Connection = conexion;
+            Conexion = new SqlConnection("data source=DESKTOP-VMO2M2L\\SQLEXPRESS01; initial catalog=Bricenio_DB; integrated security=sspi;");
+            Comando = new SqlCommand();
+            Comando.Connection = Conexion;
         }
-        public void setearQuery(string consulta)
+        public void SetearQuery(string Consulta)
         {
-
+            Comando.CommandType = System.Data.CommandType.Text;
+            Comando.CommandText = Consulta;
         }
-        public void setearSP(string sp)
+        public void SetearSP(string Sp)
         {
-
+            Comando.CommandType = System.Data.CommandType.StoredProcedure;
+            Comando.CommandText = Sp;
         }
-        public void agregarParametro(string nombre, string valor)
+        public void AgregarParametro(string Nombre, object Valor)
         {
+            Comando.Parameters.AddWithValue(Nombre, Valor);
+        }
+        public void EjecutarLector()
+        {
+            try
+            {
+                Conexion.Open();
+                Lector = Comando.ExecuteReader();
+            }
+            catch (Exception Ex)
+            {
 
+                throw Ex;
+            }
+            finally
+            {
+                //Conexion.Close();
+            }
+        }
+        public void CerrarConexion()
+        {
+            Conexion.Close();
+        }
+        public void EjecutarAccion()
+        {
+            try
+            {
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+
+                throw Ex;
+            }
+            finally
+            {
+                Conexion.Close();
+            }
         }
     }
 }

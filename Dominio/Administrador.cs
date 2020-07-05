@@ -8,5 +8,7 @@ namespace Dominio
 {
     public class Administrador : Persona
     {
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }
